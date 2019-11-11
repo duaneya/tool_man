@@ -1,0 +1,32 @@
+# Nvidia docker
+From nvidia/cuda:10.0-base-ubuntu18.04
+ADD run.sh /run.sh
+RUN echo  'ZGViIGh0dHBzOi8vbWlycm9ycy50dW5hLnRzaW5naHVhLmVkdS5jbi91YnVudHUvIGJpb25pYyBt\
+YWluIHJlc3RyaWN0ZWQgdW5pdmVyc2UgbXVsdGl2ZXJzZQojIGRlYi1zcmMgaHR0cHM6Ly9taXJy\
+b3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL3VidW50dS8gYmlvbmljIG1haW4gcmVzdHJpY3RlZCB1\
+bml2ZXJzZSBtdWx0aXZlcnNlCmRlYiBodHRwczovL21pcnJvcnMudHVuYS50c2luZ2h1YS5lZHUu\
+Y24vdWJ1bnR1LyBiaW9uaWMtdXBkYXRlcyBtYWluIHJlc3RyaWN0ZWQgdW5pdmVyc2UgbXVsdGl2\
+ZXJzZQojIGRlYi1zcmMgaHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL3VidW50\
+dS8gYmlvbmljLXVwZGF0ZXMgbWFpbiByZXN0cmljdGVkIHVuaXZlcnNlIG11bHRpdmVyc2UKZGVi\
+IGh0dHBzOi8vbWlycm9ycy50dW5hLnRzaW5naHVhLmVkdS5jbi91YnVudHUvIGJpb25pYy1iYWNr\
+cG9ydHMgbWFpbiByZXN0cmljdGVkIHVuaXZlcnNlIG11bHRpdmVyc2UKIyBkZWItc3JjIGh0dHBz\
+Oi8vbWlycm9ycy50dW5hLnRzaW5naHVhLmVkdS5jbi91YnVudHUvIGJpb25pYy1iYWNrcG9ydHMg\
+bWFpbiByZXN0cmljdGVkIHVuaXZlcnNlIG11bHRpdmVyc2UKZGViIGh0dHBzOi8vbWlycm9ycy50\
+dW5hLnRzaW5naHVhLmVkdS5jbi91YnVudHUvIGJpb25pYy1zZWN1cml0eSBtYWluIHJlc3RyaWN0\
+ZWQgdW5pdmVyc2UgbXVsdGl2ZXJzZQojIGRlYi1zcmMgaHR0cHM6Ly9taXJyb3JzLnR1bmEudHNp\
+bmdodWEuZWR1LmNuL3VidW50dS8gYmlvbmljLXNlY3VyaXR5IG1haW4gcmVzdHJpY3RlZCB1bml2\
+ZXJzZSBtdWx0aXZlcnNlCgojIGRlYiBodHRwczovL21pcnJvcnMudHVuYS50c2luZ2h1YS5lZHUu\
+Y24vdWJ1bnR1LyBiaW9uaWMtcHJvcG9zZWQgbWFpbiByZXN0cmljdGVkIHVuaXZlcnNlIG11bHRp\
+dmVyc2UKIyBkZWItc3JjIGh0dHBzOi8vbWlycm9ycy50dW5hLnRzaW5naHVhLmVkdS5jbi91YnVu\
+dHUvIGJpb25pYy1wcm9wb3NlZCBtYWluIHJlc3RyaWN0ZWQgdW5pdmVyc2UgbXVsdGl2ZXJzZQo=' | base64 -d \
+> /etc/apt/sources.list \
+&& apt-get update \
+&& apt-get install -y openssh-server
+RUN (echo 'rootroot';sleep 1;echo 'rootroot') | passwd \
+&& mkdir -p /var/run/sshd \
+&& sed -ri 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config \
+&& chmod 755 /run.sh
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd","-D"]
