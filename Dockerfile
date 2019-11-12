@@ -1,4 +1,6 @@
-# Nvidia docker
+# 给崇新学堂用
+# apt源更新为 tuna 镜像
+# 安装openssh-server，开启root登录
 From nvidia/cuda:10.0-base-ubuntu18.04
 ADD run.sh /run.sh
 RUN echo  'ZGViIGh0dHBzOi8vbWlycm9ycy50dW5hLnRzaW5naHVhLmVkdS5jbi91YnVudHUvIGJpb25pYyBt\
