@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-05T01:21:58.078Z" agent="5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="N6ilJf28aQ8S9vTs43gS" version="15.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-05T01:24:55.547Z" agent="5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="6TZJx1g2--FVYoM_VbLd" version="15.6.8" type="github">
   <diagram id="nCbv64xwvHH_72wk6HXC" name="Page-1">
-    <mxGraphModel dx="1131" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1596" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -105,6 +105,9 @@
         </mxCell>
         <mxCell id="rqh-qY_X6ij_Vvc2mvzY-47" value="&lt;div&gt;&lt;span&gt;订阅：&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;1. 前进方向&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;2. 深度图像消息&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;3. 声呐消息&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;发布：&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;1. 控制消息&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="1">
           <mxGeometry x="890" y="145" width="160" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="rqh-qY_X6ij_Vvc2mvzY-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="rqh-qY_X6ij_Vvc2mvzY-1" target="rqh-qY_X6ij_Vvc2mvzY-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
